@@ -1,0 +1,22 @@
+.transaction_history {
+  width: 400px;
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  background: lavender;
+}
+
+th {
+  border: 1px solid black;
+
+  font-weight: 600;
+  font-size: 15px;
+  padding: 5px 0 5px 0;
+}
+td {
+  border: 1px solid black;
+  font-weight: 300;
+  font-size: 13px;
+  padding: 5px 0 5px 0;
+}
