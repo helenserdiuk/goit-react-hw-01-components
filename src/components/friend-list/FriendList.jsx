@@ -5,9 +5,15 @@ import { FriendListItem } from './FriendListItem.jsx';
 export const FriendList = ({ friends }) => {
   return (
     <ul className={styles.friend_list}>
-      <FriendListItem friends={friends} />
+      {friends.map(friend => (
+        <FriendListItem key={friend.id} friend={friend} />
+      ))}
     </ul>
   );
+};
+
+FriendList.defaultProps = {
+  friends: [],
 };
 
 FriendList.propTypes = {

@@ -11,7 +11,7 @@ function getRandomColor() {
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
-      {title ? <h2 className={styles.title}>Upload stats</h2> : null}
+      {title && <h2 className={styles.title}>{title}</h2>}
 
       <ul className={styles.statList}>
         {stats.map(stat => (
@@ -29,8 +29,12 @@ export const Statistics = ({ title, stats }) => {
   );
 };
 
+Statistics.defaultProps = {
+  stats: [],
+};
+
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
