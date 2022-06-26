@@ -18,6 +18,12 @@ export const FriendListItem = ({ friend }) => {
   );
 };
 
+FriendListItem.defaultProps = {
+  avatar: '',
+  name: '',
+  isOnline: false,
+};
+
 FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
